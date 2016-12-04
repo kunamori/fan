@@ -1,0 +1,84 @@
+body {
+    background-color: #13307A;
+}
+
+#hero {
+    width: 196px;
+    height: 300px;
+    position: relative;
+    left: 200px;
+    top: 200px;
+}
+
+
+@keyframes hero-stance {
+    from {
+        top: 0;
+    }
+    to {
+        top: -15px; 
+    } 
+}
+
+
+#hero .stance {
+    visibility: hidden;
+    background-image: url(img/bender.png);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    animation-name: hero-stance;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    
+}
+
+#hero.idle .stance {
+    visibility: visible;
+}
+
+@keyframes shadow {
+    from {
+        width: 250px;
+    }
+    to {
+        width: 225px;
+        right: 12.5px;
+    }
+}
+
+#hero .shadow {
+    background-image: url(img/shadow.png);
+    width: 250px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: 0px;
+    bottom: -30px;
+    z-index: 1;
+    animation-name: shadow;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+#hero .text {
+    font-size: 55px;
+    font-weight: thin;
+    color: white;
+    width: 310px;
+    position: absolute;
+    left: 130%;
+    top: -10px;
+}
+
+
+
+
